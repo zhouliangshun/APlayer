@@ -1,15 +1,16 @@
-package com.kylins.videoplayer.bean;
+package com.kylins.aplayer.bean;
+
+import java.io.Serializable;
 
 /**
  * Created by j-zhouliangshun on 2016/7/16.
  */
-public class Video {
+public class VideoGroup implements Serializable {
 
     private String id;
     private String title;
     private String face;
-    private String cid;
-    private String url;
+    private int update;
 
     public String getId() {
         return id;
@@ -35,19 +36,11 @@ public class Video {
         this.face = face;
     }
 
-    public String getCid() {
-        return cid;
+    public int getUpdate() {
+        return update;
     }
 
-    public void setCid(String cid) {
-        this.cid = cid;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
+    public void setUpdate(int update) {
+        this.update = update;
     }
 }

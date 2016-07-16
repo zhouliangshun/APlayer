@@ -1,4 +1,4 @@
-package com.kylins.videoplayer.activities;
+package com.kylins.aplayer.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,10 +11,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.kylins.videoplayer.R;
-import com.kylins.videoplayer.bean.Video;
-import com.kylins.videoplayer.bean.VideoGroup;
-import com.kylins.videoplayer.services.ApiClent;
+import com.kylins.aplayer.R;
+import com.kylins.aplayer.bean.Video;
+import com.kylins.aplayer.services.ApiClent;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

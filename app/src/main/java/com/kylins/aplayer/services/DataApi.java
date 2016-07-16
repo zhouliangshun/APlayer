@@ -1,7 +1,7 @@
-package com.kylins.videoplayer.services;
+package com.kylins.aplayer.services;
 
-import com.kylins.videoplayer.bean.Video;
-import com.kylins.videoplayer.bean.VideoGroup;
+import com.kylins.aplayer.bean.Video;
+import com.kylins.aplayer.bean.VideoGroup;
 
 import java.util.List;
 

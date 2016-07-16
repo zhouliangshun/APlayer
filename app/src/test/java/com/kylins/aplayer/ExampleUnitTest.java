@@ -1,4 +1,4 @@
-package com.kylins.videoplayer;
+package com.kylins.aplayer;
 
 import org.junit.Test;
 
