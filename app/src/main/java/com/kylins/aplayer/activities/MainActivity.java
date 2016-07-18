@@ -8,24 +8,28 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.kylins.aplayer.R;
+import com.kylins.aplayer.bean.Video;
 import com.kylins.aplayer.bean.VideoGroup;
 import com.kylins.aplayer.services.ApiClent;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import fm.jiecao.jcvideoplayer_lib.JCFullScreenActivity;
+import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    private GridView gridView;
+    private ListView listView;
+
     private List<VideoGroup> data;
 
     private ArrayAdapter adapter = null;
@@ -34,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        gridView = (GridView) findViewById(R.id.list);
+
+        listView = (ListView)findViewById(R.id.list);
         adapter = new ArrayAdapter<VideoGroup>(this,0){
             @Override
             public int getCount() {
@@ -72,8 +77,8 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        gridView.setAdapter(adapter);
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(view.getContext(),VideoListActivity.class);

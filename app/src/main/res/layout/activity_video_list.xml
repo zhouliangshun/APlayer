@@ -7,11 +7,15 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.kylins.aplayer.activities.VideoListActivity">
+    tools:context="com.kylins.aplayer.activities.MainActivity">
 
-    <ListView
+    <GridView
         android:id="@+id/list"
+        android:columnWidth="100dp"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
-
+        android:numColumns="3"
+        android:layout_height="match_parent"
+        android:contextClickable="false"></GridView>
 </RelativeLayout>
